@@ -72,6 +72,8 @@ public class MainActivity extends Activity {
 	private static final String KEY_PKG_SIZE = "PktSize";
 	private static final String KEY_SRC_RATE = "SrcRate";
 	private static final String KEY_TIME = "Time";
+	
+	private MobileInfo mobileInfo;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -157,6 +159,7 @@ public class MainActivity extends Activity {
 															// by
 															// registerMsgClient()
 
+		mobileInfo = new MobileInfo(this);
 	}
 
 	private void restoreSettings() {
@@ -290,6 +293,8 @@ public class MainActivity extends Activity {
 			sb1.append(editTextMask.getText().toString());
 			sb1.append(BIN_CONFIG_SEPARATOR);
 			sb1.append(checkBoxScan.isChecked() ? "1" : "0");
+			sb1.append(BIN_CONFIG_SEPARATOR);
+			sb1.append(mobileInfo.isLowRateNetwork() ? 10 : 100);
 			break;
 		case 1:
 			sb1.append(1);
@@ -301,6 +306,8 @@ public class MainActivity extends Activity {
 			sb1.append(editTextMask.getText().toString());
 			sb1.append(BIN_CONFIG_SEPARATOR);
 			sb1.append(checkBoxScan.isChecked() ? "1" : "0");
+			sb1.append(BIN_CONFIG_SEPARATOR);
+			sb1.append(mobileInfo.isLowRateNetwork() ? 10 : 100);
 			break;
 		case 2:
 			sb1.append(2);

@@ -305,6 +305,22 @@ public class MobileInfo {
 		this.networkType = networkType;
 	}
 	
+	public boolean isLowRateNetwork() {
+		boolean res = false;
+		switch (getNetworkType()) {
+		case 2:
+			res = true;
+			break;
+		case 1:
+			res = true;
+			break;
+		default:
+			break;
+		}
+		return res;
+		
+	}
+	
     public String getNetworkType(int networkType) {
 
 	    switch (networkType)
