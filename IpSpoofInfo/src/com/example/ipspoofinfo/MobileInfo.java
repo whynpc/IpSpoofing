@@ -195,7 +195,7 @@ public class MobileInfo {
 	}
 	
 	public String getTraceRoute() {
-		try {
+		/*try {
 			Process process = Runtime.getRuntime().exec("su -c traceroute google.com");			
 			StringBuffer sb = new StringBuffer();
 			BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -222,7 +222,7 @@ public class MobileInfo {
 			return sb.toString();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
+		}*/
 		return "NULL";
 	}
 	

@@ -85,7 +85,7 @@ public class SimplifiedMainActivity extends Activity {
 			binaryHandler.runSimpleCase(false, 16, true);
 		}
 		if (checkBoxCase4P.isChecked()) {
-			binaryHandler.runSimpleCase(false, 16, true);
+			binaryHandler.runSimpleCase(false, 32, true);
 		}				
 		
 	}
